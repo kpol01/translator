@@ -1,5 +1,5 @@
-function translateText() {
-    var inputText = document.getElementById('input-text').value;
+document.getElementById('input-text').addEventListener('input', function() {
+    var inputText = this.value;
     fetch('/translate', {
         method: 'POST',
         headers: {
@@ -11,4 +11,4 @@ function translateText() {
     .then(translatedText => {
         document.getElementById('output-text').innerText = translatedText;
     });
-}
+});
