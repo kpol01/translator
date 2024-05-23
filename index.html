@@ -4,14 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>English to Bengali Translator</title>
-    <link rel="stylesheet" href="{{ url_for('translator_webpage', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('tranlator_webpage', filename='styles.css') }}">
 </head>
 <body>
-    <div class="container">
-        <h1>English to Bengali Translator</h1>
-        <textarea id="input-text" placeholder="Type English text here"></textarea>
-        <div id="output-text"></div>
+    <div class="chat-container">
+        <div class="chat-box" id="chat-box">
+            <div class="chat-message chat-reply">
+                <p>Welcome to English to Bengali Translator! Type your message below to start translating.</p>
+            </div>
+        </div>
+        <div class="user-input">
+            <textarea id="input-text" placeholder="Type English text here"></textarea>
+            <button id="send-button">Send</button>
+        </div>
     </div>
-    <script src="{{ url_for('translator_webpage', filename='script.js') }}"></script>
+    <script src="{{ url_for('tranlator_webpage', filename='script.js') }}"></script>
 </body>
 </html>
